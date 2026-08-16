@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Forgot Password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="forgot-page">
+
+    <header class="forgot-header">
+        <a href="../index.html">
+            <img src="../img/logo.png" class="logo" alt="Netflix Logo">
+        </a>
+    </header>
+
+    <main class="forgot-wrapper">
+        <div class="forgot-card">
+            <h1>Update password, email or phone</h1>
+            <p class="sub-heading">How would you like to reset your password?</p>
+
+            <form action="#" method="POST">
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="reset-option" value="email" checked id="option-email">
+                        <span>Email</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="reset-option" value="sms" id="option-sms">
+                        <span>Text Message (SMS)</span>
+                    </label>
+                </div>
+                <p class="instruction-text" id="instruction">
+                    We will send you an email with instructions on how to reset your password.
+                </p>
+                <div class="reset-input-box">
+                    <input type="email" id="reset-field" placeholder="Email" required>
+                </div>
+                <button type="submit" class="reset-btn" id="submit-btn">Email Me</button>
+            </form>
+            <div class="forgot-help-link">
+                <a href="signin.html">I don't remember my email or phone.</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="forgot-footer">
+        <p>This page is protected by Google reCAPTCHA to ensure you're not a bot.</p>
+    </footer> 
+
+    <script>
+        const optionEmail = document.getElementById('option-email');
+        const optionSms = document.getElementById('option-sms');
+        const instruction = document.getElementById('instruction');
+        const resetField = document.getElementById('reset-field');
+        const submitBtn = document.getElementById('submit-btn');
+
+        optionEmail.addEventListener('change', () => {
+            instruction.textContent = "We will send you an email with instructions on how to reset your password.";
+            resetField.placeholder = "Email";
+            resetField.type = "email";
+            submitBtn.textContent = "Email Me";
+        });
+
+        optionSms.addEventListener('change', () => {
+            instruction.textContent = "We will text you a verification code to reset your password. Message and data rates may apply.";
+            resetField.placeholder = "Text Message (SMS)";
+            resetField.type = "tel";
+            submitBtn.textContent = "Text Me";
+        });
+    </script>
+</body>
+</html>

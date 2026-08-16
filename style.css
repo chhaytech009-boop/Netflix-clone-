@@ -1,0 +1,822 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: ' Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000000;
+    color: #fff;
+}
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/header-image.png');
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.logo{
+    width: 180px;
+    cursor: pointer;
+}
+nav button{
+    
+    border: 0;
+    outline: 0;
+    background: #f30505;
+    color:#fffbfb;
+    padding: 7px 20px;
+    font-size: 15px;
+    border-radius: 10px ;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.language-btn{
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+}
+.language-btn img{
+    width: 10px;
+    margin-left: 10px;
+}
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+.header-content h1{
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+}
+.header-content h3{
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.email-signup {
+    display:flex ;
+    background:#fff;
+    border-radius: 4px;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.email-signup input{
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+.email-signup button{
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+    border-radius: 4px;
+}
+
+.features{
+    padding: 50px 12%;
+    font-size: 22px;
+}
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col img {
+    display: block;
+    width: 90%;
+    margin: auto;
+    transition: transform 0.4s ease, filter 0.4s ease; 
+}
+.img-col img:hover {
+    transform: scale(1.05);   
+    filter: brightness(1.1);  
+    cursor: pointer;
+}
+.features h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px,
+}
+.faq h2{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 900px;
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 1%;
+    margin-bottom: px;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 1px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition:  max-height 0.5s; padding: 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after {
+    transform: rotate(135deg);
+}
+.faq .email-signup{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+.faq small{
+    font-size: 13px;
+}
+
+
+.footer{
+    padding: 50px 15% 10px;
+    border-top:6px solid #333;
+    color: #777;
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+
+}
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.footer .language-btn{
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+.copyright-text{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+@media only screen and (max-width:600px){
+    .logo {
+        width: 100px;
+    }
+    nav bottom{
+        padding: 5px 10x;
+    }
+    nav .language-btn{
+        padding: 4px 8px ;
+    }
+    .header-content{
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+    .header-content h1{
+        font-size: 30px;
+    }
+    .email-signup{
+        font-size: 12px;
+        padding: 10px 15px ;
+    }
+    .text-col, .img-col{
+
+        flex-basis: 100%;
+    }
+    .features h2{
+        font-size: 30px;
+    }
+    .features p{
+        font-size: 15px;
+    }
+    .row:nth-child(2), .row:nth-child(4){
+        flex-direction: column-reverse;
+    }
+    .features .row{
+
+    padding: 10px 0;
+    }
+    .faq h2{
+        padding: 20px
+    }
+    .accordion .content{
+        font-size: 14px;
+    }
+    .accordion li lable{
+        padding: 10px;
+        font-size: 14px;
+    }
+    .lable::after{
+        font-size: 22px;
+    }
+}
+
+
+
+
+
+/* ================= NEW SIGN IN PAGE STYLES ================= */
+
+/* Background gradient matching the Netflix sign-in screen */
+body.signin-page {
+    background: radial-gradient(circle at 20% 10%, #3d0509 0%, #0f0203 45%, #000000 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.signin-header {
+    padding: 24px 4%;
+}
+
+.signin-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.signin-card {
+    width: 100%;
+    max-width: 440px;
+    padding: 10px 0;
+}
+
+.signin-card h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.signin-card .sub-text {
+    font-size: 16px;
+    color: #cccccc;
+    margin-bottom: 28px;
+}
+
+/* Floating label input box */
+.floating-label-input {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.floating-label-input input {
+    width: 100%;
+    height: 56px;
+    background: #272732;
+    border: 1px solid #484856;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 22px 16px 6px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.floating-label-input input:focus {
+    border-color: #ffffff;
+}
+
+.floating-label-input label {
+    position: absolute;
+    left: 16px;
+    top: 8px;
+    font-size: 12px;
+    color: #b3b3b3;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+/* Red Continue Button */
+.continue-btn {
+    width: 100%;
+    height: 48px;
+    background: #e50914;
+    color: #ffffff;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.continue-btn:hover {
+    background: #c11119;
+}
+
+/* Get Help Link */
+.get-help {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.get-help a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.get-help a:hover {
+    text-decoration: underline;
+}
+
+.get-help .arrow {
+    font-size: 12px;
+}
+
+/* Footer reCAPTCHA Note */
+.recaptcha-notice {
+    font-size: 13px;
+    color: #8c8c8c;
+    line-height: 1.4;
+}
+
+/* Remove the '+' icon specifically on the sign-in page */
+.signin-page label::after {
+    content: none;
+}
+
+.help-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.help-links a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+.help-links a:hover {
+    color: #e50914;
+}
+
+
+/* PASSWORD PAGE */
+
+body.forgot-page {
+    background: #000000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.forgot-header {
+    padding: 24px 4%;
+}
+
+.forgot-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 20px 8%;
+}
+
+/* White Card Panel */
+.forgot-card {
+    background: #f3f3f3;
+    color: #000000;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px 48px;
+    border-radius: 4px;
+}
+
+.forgot-card h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #000000;
+    line-height: 1.2;
+}
+
+.forgot-card .sub-heading {
+    font-size: 16px;
+    color: #141414;
+    margin-bottom: 20px;
+}
+
+/* Radio buttons */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #000000;
+}
+
+.radio-option input[type="radio"] {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    accent-color: #000000; /* Dark inner selection dot */
+    cursor: pointer;
+}
+
+
+.instruction-text {
+    font-size: 15px;
+    color: #141414;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+
+.reset-input-box input {
+    width: 100%;
+    height: 48px;
+    background: #ffffff;
+    border: 1px solid #b3b3b3;
+    border-radius: 2px;
+    padding: 0 16px;
+    font-size: 16px;
+    color: #000000;
+    outline: none;
+    margin-bottom: 24px;
+}
+
+.reset-input-box input:focus {
+    border-color: #000000;
+}
+
+/* Red Action Button */
+.reset-btn {
+    width: 100%;
+    height: 48px;
+    background: #e50914;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 24px;
+    transition: background 0.2s ease;
+}
+
+.reset-btn:hover {
+    background: #c11119;
+}
+
+/* Link */
+.forgot-help-link a {
+    color: #000000;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+.forgot-help-link a:hover {
+    color: #e50914;
+}
+
+/* Footer note */
+.forgot-footer {
+    text-align: center;
+    padding: 20px;
+    color: #737373;
+    font-size: 13px;
+}
+
+
+
+/* HELP CENTER PAGE STYLES*/
+
+body.help-page {
+    background-color: #ffffff;
+    color: #222222;
+    min-height: 100vh;
+}
+
+/* Header */
+.help-header {
+    background-color: #000000;
+    height: 68px;
+    padding: 0 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.help-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.help-nav-left .logo {
+    width: 100px;
+}
+
+.help-nav-left .divider {
+    color: #444;
+    font-size: 20px;
+}
+
+.help-center-title {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.help-nav-right {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-join {
+    border: 1px solid #444;
+    background: transparent;
+    color: #ffffff;
+    padding: 7px 16px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn-signin {
+    background-color: #e50914;
+    color: #ffffff;
+    padding: 7px 16px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Layout Grid */
+.help-container {
+    max-width: 1100px;
+    margin: 32px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 48px;
+}
+
+.help-main {
+    flex: 1;
+}
+
+.back-link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.help-main h1 {
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: #141414;
+}
+
+.intro-text {
+    font-size: 16px;
+    margin-bottom: 16px;
+    color: #333333;
+}
+
+.help-bullet-list {
+    margin-left: 20px;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.help-bullet-list li {
+    margin-bottom: 8px;
+}
+
+.red-link {
+    color: #e50914;
+    text-decoration: underline;
+}
+
+/* Sections & Accordions */
+.device-section {
+    margin-bottom: 36px;
+}
+
+.device-section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #141414;
+}
+
+.device-desc {
+    font-size: 15px;
+    color: #333333;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+/* Native HTML Accordion Styling */
+.help-accordion {
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    background: #ffffff;
+}
+
+.help-accordion summary {
+    padding: 14px 18px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #222222;
+    outline: none;
+    list-style-position: inside;
+}
+
+.help-accordion summary:hover {
+    background-color: #f8f8f8;
+}
+
+.accordion-body {
+    padding: 16px 18px;
+    border-top: 1px solid #eee;
+    background-color: #fafafa;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444444;
+}
+
+/* Helpful rating */
+.helpful-feedback {
+    border-top: 1px solid #e6e6e6;
+    padding-top: 20px;
+    margin-top: 40px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.helpful-feedback a {
+    color: #000000;
+    margin-left: 8px;
+    text-decoration: underline;
+}
+
+/* Sidebar */
+.help-sidebar {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.related-card {
+    border: 1px solid #e6e6e6;
+    border-top: 4px solid #e50914;
+    border-radius: 4px;
+    padding: 20px;
+    background: #ffffff;
+}
+
+.related-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #141414;
+}
+
+.related-card ul {
+    list-style: none;
+}
+
+.related-card li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.related-card li:last-child {
+    margin-bottom: 0;
+}
+
+.related-card a {
+    color: #000000;
+    text-decoration: underline;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.related-card a:hover {
+    color: #e50914;
+}
+
+/* Mobile Responsiveness for Help Center */
+@media (max-width: 768px) {
+    .help-container {
+        flex-direction: column;
+    }
+    .help-sidebar {
+        width: 100%;
+    }
+}

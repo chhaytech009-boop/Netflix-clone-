@@ -1,0 +1,55 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix-Sign In</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="signin-page">
+
+    
+    <header class="signin-header">
+        <a href="../index.html">
+            <img src="../img/logo.png" class="logo" alt="Netflix Logo">
+        </a>
+    </header>
+
+    
+    <main class="signin-wrapper">
+        <div class="signin-card">
+            <h1>Enter your info to sign in</h1>
+            <p class="sub-text">Or get started with a new account.</p>
+
+            <form action="#" method="POST">
+                <div class="floating-label-input">
+                    <input 
+                        type="text" 
+                        id="user-id" 
+                        required 
+                        placeholder="Email or mobile number" 
+                        value=""
+                    />
+                    <label for="user-id">Email or mobile number</label>
+                </div>
+
+                <button type="submit" class="continue-btn">Continue</button>
+            </form>
+
+            <div class="get-help">
+                <p>Get Help <span class="arrow">⌵</span></p>
+                <div class="help-links">
+                    <a href="/forget.html">Forgot email or mobile number?</a>
+                    <a href="/lern-more.html">Learn more about sign-in</a>
+                </div>
+            </div>
+
+            <p class="recaptcha-notice">
+                This page is protected by Google reCAPTCHA to ensure you're not a bot.
+            </p>
+        </div>
+    </main>
+
+</body>
+</html>
